@@ -1,0 +1,34 @@
+spring:
+  profiles: prod
+  application:
+    name: vehicle-monitor
+server:
+  port: 8081
+
+eureka:
+  client:
+    serviceUrl:
+#      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+#      defaultZone: http://eureka-server:8761/eureka
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    preferIpAddress: true
+name: prod-YAML
+timeout: 70
+companies:
+  - name: Kalles Grustransporter AB
+    address: Cementvägen 8, 111 11 Södertälje
+    vehicles:
+      YS2R4X20005399401: ABC123
+      VLUR4X20009093588: DEF456
+      VLUR4X20009048066: GHI789
+  - name: Johans Bulk AB
+    address: Balkvägen 12, 222 22 Stockholm
+    vehicles:
+      YS2R4X20005388011: JKL012
+      YS2R4X20005387949: MNO345
+  - name: Haralds Värdetransporter AB
+    address: Budgetvägen 1, 333 33 Uppsala
+    vehicles:
+      VLUR4X20009048066: PQR678
+      YS2R4X20005387055: STU901
