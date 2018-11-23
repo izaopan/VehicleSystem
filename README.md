@@ -6,3 +6,6 @@ To build the executable jars
 
 to run the projects:
   - docker-compose up
+
+To build the images
+  - docker-compose build` or `docker-compose up --build
